@@ -1,24 +1,19 @@
-# tiny-market
+# Простой маленький магазин с случайным продуктами из api
 
-## Project setup
-```
-npm install
-```
+### Каталог
 
-### Compiles and hot-reloads for development
+![Shot1](src/assets/images/ReadmeImg/shot1.png)
+
+### Корзина
+
+![Shot2](src/assets/images/ReadmeImg/shot2.png)
+
+### Избранное
+
+![Shot3](src/assets/images/ReadmeImg/shot3.png)
+
+### Запустить проект
+
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
