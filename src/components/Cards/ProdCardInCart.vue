@@ -1,12 +1,19 @@
 <template>
   <div class="main-wrapper">
     <div class="start-column">
-      <label> {{ number + 1 }}
-        <input type="checkbox" v-model="productData.checked">
+      <label>
+        {{ number + 1 }}
+        <input type="checkbox" v-model="productData.checked" />
       </label>
     </div>
     <div class="img-wrapper">
-      <img class="img" :src="productData.image" height="100%" width="100%" ref="myImg" />
+      <img
+        class="img"
+        :src="productData.image"
+        height="100%"
+        width="100%"
+        ref="myImg"
+      />
     </div>
     <div class="card-info-wrapper">
       <div class="card-name">{{ productData.name }}</div>
@@ -19,14 +26,13 @@
         <input
           class="input"
           type="number"
-          min="1" max="99"
+          min="1"
+          max="99"
           v-model="productData.quantity"
           @input="counterHandler(productData.quantity)"
-        >
+        />
       </label>
-      <div class="delete" @click="deleteFromCart">
-        удалить
-      </div>
+      <div class="delete" @click="deleteFromCart">удалить</div>
     </div>
   </div>
 </template>
@@ -37,14 +43,14 @@ export default {
   props: {
     productData: {
       type: Object,
-      default: function() {
+      default: function () {
         return {};
-      }
+      },
     },
     number: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   mounted() {
     this.$set(this.productData, "checked", false);
@@ -55,8 +61,8 @@ export default {
     },
     deleteFromCart() {
       this.$emit("deleteFromCart");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -80,9 +86,9 @@ export default {
 }
 
 .img-wrapper {
-
-  min-width: 120px;
-  min-height: 100px;
+  width: 120px;
+  height: 120px;
+  align-self: center;
 }
 
 .card-info-wrapper {
